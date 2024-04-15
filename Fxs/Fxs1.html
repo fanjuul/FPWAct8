@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8"/>
+    <title>Functions: Task 1</title>
+    <style>
+      p {
+        color: purple;
+        margin: 0.5em 0;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+    </style>
+    <link rel="stylesheet" href="../styles.css" />
+  </head>
+
+  <body>
+
+    <section class="preview">
+
+
+
+    </section>
+
+  </body>
+  <script>
+    const names = ['Chris', 'Li Kang', 'Anne', 'Francesca', 'Mustafa', 'Tina', 'Bert', 'Jada'];
+    const para = document.createElement('p');
+
+    function chooseName() {
+      // Generate a random index within the length of the names array
+      const randomIndex = Math.floor(Math.random() * names.length);
+      // Get the name at the randomly generated index
+      const randomName = names[randomIndex];
+      // Display the random name in the paragraph
+      para.textContent = randomName;
+    }
+
+    // Call chooseName function once to display a random name
+    chooseName();
+
+    // Don't edit the code below here!
+
+    const section = document.querySelector('section');
+
+    section.appendChild(para);
+  </script>
+
+</html>

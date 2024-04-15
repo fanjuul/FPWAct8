@@ -2,7 +2,7 @@
 <html lang="en-US">
   <head>
     <meta charset="utf-8"/>
-    <title>Functions: Task 3</title>
+    <title>Functions: Task 4</title>
     <style>
       p {
         color: purple;
@@ -29,20 +29,16 @@
     const names = ['Chris', 'Li Kang', 'Anne', 'Francesca', 'Mustafa', 'Tina', 'Bert', 'Jada'];
     const para = document.createElement('p');
 
-    function random(min, max) {
-      return Math.floor(Math.random() * (max - min + 1)) + min;
-    }
+    // Change isShort() to an arrow function
+    const isShort = name => name.length < 5;
 
-    function chooseName(namesArray) {
-      const randomIndex = random(0, namesArray.length - 1);
-      return namesArray[randomIndex];
-    }
-
-    // Display the randomly chosen name in the paragraph
-    para.textContent = chooseName(names);
+    const shortNames = names.filter(isShort);
+    para.textContent = shortNames;
 
     // Don't edit the code below here!
+
     const section = document.querySelector('section');
+
     section.appendChild(para);
   </script>
 
